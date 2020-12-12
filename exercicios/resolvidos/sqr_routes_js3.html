@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Programação em Javascript</title>
+</head>
+<body>
+    <img src = "images/logo_istec.png">
+    <h3>Tecnologias da Internet I</h3>
+    <h3>Web e Multimedia I</h3>
+    <script>
+        var i = 0;
+        function print_sqr2(n1,n2)
+        {
+            txt = "";
+            n1 = Number(n1);
+            n2 = Number(n2);
+            for (i = n1; i <= n2; i++) 
+            {
+                txt = txt +  "<b>" + i + "</b>" + "\t" + " | " + "\t" + "<b>" + Math.sqrt(i) + "</b>" + "</br>";
+            }
+            document.getElementById("aprint").innerHTML = txt;
+        }
+        
+        // print sqrt values
+        function print_sqr1(n1,n2)
+        {
+            n1 = Number(n1);
+            n2 = Number(n2);
+            for (i = n1; i <= n2; i++) 
+            {
+                document.write(i + " | " + Number(Math.sqrt(i)) + "<br>");
+                document.write("<hr>");
+            }
+        }
+    </script>
+    <br /><br />
+    Limite inferior: <input id="idc1" type="text" size="15" />
+    Limite superior: <input id="idc2" type="text" size="15" /><br/>
+    <br />
+    <input type="button" onclick="print_sqr1(idc1.value,idc2.value)" value="Print SQRT values1" />
+    <input type="button" onclick="print_sqr2(idc1.value,idc2.value)" value="Print SQRT values2" />
+    <hr/>
+    <p id="aprint">Print area</p>
+    </body>
+</html>

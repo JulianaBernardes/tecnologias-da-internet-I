@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Difine color:
+        <input type="text" id="cor" name="cor">
+        <input type="button" onclick="document.bgColor = cor.value" value="background color 1">
+        <input type="button" onclick="add_color1()" value="background color 2">
+        <input type="button" onclick="add_color2()" value="background color 3">
+    </form>
+    <script>
+        var newvec = new Array()
+        var total = prompt("Array dimension:")
+        for (i=0; i< total; i++) {
+            var nome = prompt("Cor["+i+"]")
+            newvec[i] = nome
+        }
+        for (i=0; i< total; i++)
+        document.write(" | " + newvec[i])
+
+        i = 0
+        function add_color1() {
+            if(i < total) {
+                document.bgColor = newvec[i]
+            } else i = 0
+        }
+        function add_color2() {
+            i = Math.floor((Math.random() * newvec.length))
+            document.bgColor = newvec[i]
+        }
+
+    </script>
+</body>
+</html>

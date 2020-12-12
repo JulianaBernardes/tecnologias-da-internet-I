@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Testing JavaScript Objects</title>
+</head>
+<body>
+    <h2>Testing JavaScript Objects</h2>
+    <h3>Sintaxe: </h3>
+    <script>
+        // ordena palavras e coloca na caixa de texto (textarea)
+        function sortPals1(txt)
+        {
+            // cria array de palavras com base numa string
+            tarea.value = "";
+            str = new String();
+            pals = new Array();
+            pals = txt.split(" ");
+            pals.sort();
+            for (i = 0; i < pals.length; i++)
+                str += "\n" + pals[i];
+            tarea.value = str;
+        }
+
+        // separa e ordena as palavras e coloca na caixa de texto (textarea)
+        function sortPals2(txt)
+        {
+            tarea.value = "";
+            str = new String();
+            pals = new Array();
+            pals = txt.split(" ");
+            pals.sort();
+            pals.reverse();
+            for (i = 0; i < pals.length; i++)
+                str += "\n" + pals[i];
+            tarea.value = str;
+        }
+
+    </script>
+    <textarea id="tbox" rows="20" cols="30"> </textarea>
+    <input type="button" value="Sort words 1" onclick="sortPals1(tbox.value)" />
+    <input type="button" value="Sort words 2" onclick="sortPals2(tbox.value)" />
+    <textarea id="tarea" rows="20" cols="30"> </textarea>
+</body>
+</html>

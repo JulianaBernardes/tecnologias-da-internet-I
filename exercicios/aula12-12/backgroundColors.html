@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Document Object</title>
+    <script src="ex1.js"></script>
+</head>
+
+<body>
+    <h1>Javascript Document Object</h1>
+    <h2>Document background colors</h2>
+
+    Difine color:
+    <input type="text" id="color" name="color">
+    <input type="button" onclick="backgroundColor1(color.value)" value="background color 1">
+    <input type="button" onclick="backgroundColor2(color.value)" value="background color 2">
+    <input type="button" onclick="backgroundColor3(color.value)" value="background color 3">
+    <div id="colorContainer"></div>
+</body>
+<script>
+    function backgroundColor1(color) {
+        const colorArray = []
+        var html = ""
+        currentColor = document.body.style.backgroundColor
+ 
+        document.body.style.backgroundColor = color;
+        if (currentColor != color && color) {
+            var x = document.getElementById("colorContainer");
+            x.innerHTML += ` ${color} | `;
+        }
+        console.log(currentColor);
+    }
+</script>
+
+</html>

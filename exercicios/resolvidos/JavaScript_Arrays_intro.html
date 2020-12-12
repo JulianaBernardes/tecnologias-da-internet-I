@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript - arrays and objects</title>
+</head>
+<body>
+    <h2>JavaScript - working with arrays and objects</h2>
+    <p id="demo1">
+        JavaScript arrays.
+    </p>
+    <script>
+        // Arrays
+        var newvec = new Array();
+        var total = prompt("Dimensão do array:");
+        for (i = 0; i < total; i++)
+        {
+            var nome = prompt("Vector["+i+"]= " );
+            newvec[i] = nome;
+        }
+        
+        for (i = 0; i < total; i++) 
+            document.write(" | " + newvec[i]);                
+        document.write("<hr/>");
+        // new array
+        var mycars = new Array();
+        mycars[0] = "Saab";
+        mycars[1] = "Volvo";
+        mycars[2] = "BMW";
+        mycars[3] = "Porsche";
+        mycars[4] = "Audi";
+        mycars[5] = "Volskswagen";
+        mycars[6] = "Aston Martin";
+        mycars[7] = "Alfa Romeo";
+        
+        var n = prompt("Dimensão do array:", "10");
+        var narray = new Array();
+        for (i = 0; i < n; i++)
+            narray[i] = i * 5;
+
+        var arr = new Array();
+        for (i = 0; i < n; i++)
+            arr[i] = Math.PI * (i+1);
+
+        // visualizar os elementos dos arrays
+        for (i = 0; i < mycars.length; i++)
+            document.write(" | " + mycars[i]);
+
+        for (i = 0; i < narray.length; i++)
+            document.write("<br/>" + narray[i]);
+
+        for (i = 0; i < arr.length; i++)
+            document.write("<br/>" + arr[i]);
+
+        // while loop
+        var cont = 0;
+        document.write("Inicia ciclo" + "<br />");
+        while (cont < n) 
+        {
+            document.write("Contagem: " + cont + "<br />");
+            cont++;
+        }
+    </script>
+</body>
+</html>

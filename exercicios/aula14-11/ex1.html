@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" mxlns="www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <a href="http://www.w3.org/TR/html401/interact/forms.html">W3C - introduction to forms</a>
+
+    <form>
+        <h3> === Form (formulários) ===</h3>
+        <h4> === HTML5 user input types ===</h4>
+        Insert text <br>
+        Nome:
+        <input type="text" name="nome">
+        <br>
+        Insert date <br>
+        Data de Nascimento:
+        <input type="date" name="bday">
+        <br>
+        Insert date and time <br>
+        Data de nascimento: (date and time):
+        <input type="datetime-local" name="bdaytimelocal">
+        <br>
+        Define a control for entering a time (no time zone):
+        <br>
+        Select a time: <input type="time" name="usr_time">
+        <br>
+        Insert email <br>
+        E-mail: <input type="email" name="email">
+        <br> <br>
+        Define a numeric field (with resctrictions): <br>
+        Quantity (between 1 and 99):
+        <input type="number" name="quantity" min="1" max="99">
+        <br><br>
+        Quantity (between 0 and 100 and step 10):
+        <input type="number" name="quantity" min="0" max="99" step="10"><br>
+        Definir nota (0-20): <input type="range" name="nota" min="0" max="20">
+        <br><br>
+        <label for="gsearch">Search Google:</label>
+        <input type="search" id="gsearch" name="gsearch">
+        <br> <br>
+        <label for="favcolor">Select a color:</label>
+        <input type="color" id="favcolor" name="favcolor">
+        <br><br>
+        Define a field for entering a URL <br>
+        <label for="homepage">(URL web link):</label>
+        <input type="url" id="homepage" name="homepage">
+        <br><br>
+        Difine a week and year control: <br>
+        <label for="week">Select a week:</label>
+        <input type="week" id="week" name="week">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>testing functions in javascript</title>
+<script type="text/javascript">
+  
+    // função para imprimir o alfabeto
+    function printAlphabet()
+    {
+        for (var i = 65; i <= 90; i++)
+            document.write(String.fromCharCode(i));        
+    }
+
+    // função para imprimir a tabela ASCII
+    function printASCIItable1()
+    {
+        for (var i = 0; i <= 255; i++)
+            document.write(String.fromCharCode(i));
+    }
+
+    // função para imprimir a tabela ASCII (versão formatada)
+    function printASCIItable2()
+    {
+        document.write("<h2>" + "Tabela ASCII" + "</h2>");
+        for (var i = 0; i <= 255; i++)
+        {
+            document.write(String.fromCharCode(i) + " ");
+            if (i % 32 == 0) document.write("<br>");
+            if (i == 128) document.write("<hr/>" +"<h3>" + "Extended ASCII Codes" + "</h3>");
+
+        }
+    }
+
+    // função para imprimir a tabela ASCII (versão formatada)
+    function printValues(par1,par2)
+    {
+        var n1 = par1.value;
+        var n2 = par2.value;
+        document.write("<h2>" + "Imprime valores entre " + n1 + " e " + n2 + "</h2>");
+        for (var i = n1; i <= n2; i++)
+        {
+            document.write(i + " ");
+            if (i % 20 == 0) document.write("<br><br>");
+        }
+    }
+
+</script>
+</head> 
+
+<body> 
+    <h3>Testing JavaScript functions and parameters</h3>
+    <form> 
+        <br /><br />
+        <input type="button" onclick="printAlphabet()" value="Print Alphabet" />
+        <br /><br />
+        <input type="button" onclick="printASCIItable1()" value="Print ASCII table" />
+        <br /><br />
+        <input type="button" onclick="printASCIItable2()" value="Print ASCII table (formatted)" /> 
+        <br /><hr /><br />
+        <p><b>Imprimir valores (definir intervalo): </b></p>
+
+        <input id="param1" type="number" size="15" />
+        <input id="param2" type="number" size="15" />
+        <input type="button" onclick="printValues(param1,param2)" value="Print values" /> 
+    </form>
+</body>
+</html>
