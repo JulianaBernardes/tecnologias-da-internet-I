@@ -45,14 +45,11 @@
     </div>
 
     <script>
-        // When the user clicks on div, open the popup
         function toggleDisplay() {
             var x = document.getElementById("myPopup1");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "none";
-            }
+            x.style.display === "block"
+                ? x.style.display = "blocks"
+                : x.style.display = "none";
         }
 
         function changeColor() {
@@ -67,14 +64,14 @@
             }, 3000)
         }
 
-        // You could easily add more colors to this array.
+        // add colors array
         var colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
         var divs = document.querySelectorAll("div");
         var button = document.querySelector("button");
 
         function changeColor() {
             for (i = 0; i < divs.length; i++) {
-                // Pick a random color from the array 'colors'.
+                // random color
                 divs[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
             }
         };
