@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popups</title>
+    <style>
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        div {
+            border: solid 3px black;
+            padding: 20px;
+            margin-right: 50px;
+            margin-top: 20px;
+            display: inline-block
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Programming with HTML, CSS and Javascript, all together !</h1>
+
+    <div class="popup" id="myPopup1">
+        Exemplo de pop-up com o elemento <strong>div.</strong> <br>
+        Este pop-up não pode ser bloqueado.
+        <button onclick="toggleDisplay()">[X]</button>
+    </div>
+
+    <div class="popup" id="myPopup2">
+        Exemplo de pop-up com o elemento <strong>div.</strong> <br>
+        Este pop-up altera as cores.
+        <button onclick="changeColor()">[X]</button>
+    </div>
+
+    <div class="popup" id="myPopup3">
+        Exemplo de pop-up com o elemento <strong>div.</strong> <br>
+        Este pop-up fecha em 3s.
+        <button onclick="timerClose()">[X]</button>
+    </div>
+
+    <script>
+        // When the user clicks on div, open the popup
+        function toggleDisplay() {
+            var x = document.getElementById("myPopup1");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function changeColor() {
+            var x = document.getElementById("myPopup2");
+
+        }
+
+        function timerClose() {
+            var x = document.getElementById("myPopup3");
+            setTimeout(function () {
+                x.style.display = "none"
+            }, 3000)
+        }
+
+        // You could easily add more colors to this array.
+        var colors = ['red', 'blue', 'green', 'teal', 'rosybrown', 'tan', 'plum', 'saddlebrown'];
+        var divs = document.querySelectorAll("div");
+        var button = document.querySelector("button");
+
+        function changeColor() {
+            for (i = 0; i < divs.length; i++) {
+                // Pick a random color from the array 'colors'.
+                divs[i].style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            }
+        };
+
+        button.style.cursor = "pointer";
+
+
+
+
+    </script>
+
+</body>
+
+</html>
