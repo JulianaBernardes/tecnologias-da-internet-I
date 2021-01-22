@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Unidades Curriculares</h1>
+    <h2>Javascript - Programação do lado do cliente</h2>
+
+    Nome do aluno:
+    <input type="text" name="nome" id="alunoNome">
+
+    Nota final:
+    <input type="number" name="nota" id="alunoNota">
+    <br> <br>
+    <input type="button" onclick="addStudent()" value="Add Student">
+    <br><br>
+    <input type="button" onclick="printStudent()" value="Print Student">
+    <br>
+    <div id="estatisticas">
+
+    </div>
+
+
+    <script>
+        let alunos = []
+        let notas = []
+        let totalAlunos = 0
+        let somaNotas = 0
+        
+        
+
+        function addStudent() {
+            if (alunoNome.value && alunoNota.value) {
+                alunos.push(alunoNome.value)
+                notas.push(Number(alunoNota.value))
+                totalAlunos++
+                somaNotas += Number(alunoNota.value)
+                
+            }
+        }
+
+
+
+        function printStudent() {
+
+            let maxNotas = Math.max(...notas)
+            let minNotas = Math.min(...notas)
+
+
+            let mediaNotas = somaNotas / totalAlunos
+
+            let result = ""
+            for (i = 0; i < totalAlunos; i++) {
+                result += `
+                <br>
+                Nome: ${alunos[i]} 
+                <br>
+                Nota: ${notas[i]}
+                <br>                
+                `
+            }
+            result +=
+                `
+                    <br>
+                    Total de alunos: ${totalAlunos}
+                    <br>
+                    Nota superior: ${maxNotas}
+                    <br>
+                    Nota inferior: ${minNotas}
+                    <br>
+                    Media das notas: ${mediaNotas}
+                `
+
+            document.querySelector("#estatisticas").innerHTML = result
+        }
+
+    </script>
+
+</body>
+
+</html>
