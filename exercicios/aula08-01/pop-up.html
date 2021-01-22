@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #popup1 {
+            position: absolute;
+            top: 30%;
+            left: 30%;
+            width: auto;
+            padding: 30px 50px 50px 30px;
+            border-width: 5px;
+            border-style: solid;
+        }
+        #popup2 {
+            position: absolute;
+            top: 55%;
+            left: 55%;
+            width: auto;
+            height: auto;
+            padding: 30px 50px 30px;
+            border-width: 3px;
+            border-style: double solid;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body onload="abrir()">
+    <h2>Learning JS client-side programming</h2>
+    <h3>Programming with HTML, CSS, JavaScript, all together !</h3>
+    <div id="popup1">
+        Exemplo com um elemento <br>
+    </div>
+    <div id="popup2">
+        Exemplo com um elemento <br>
+    </div>
+
+    <a href="javascript: abrir1()">Abrir pop-up1</a> <br>
+    <a href="javascript: 
+    fechar1()">Fechar pop-up1</a> <br>
+    <a href="javascript: abrir2()">Abrir pop-up2</a> <br>
+    <a href="javascript: fechar2()">Fechar pop-up2</a> <br>
+
+    <input type="number" name="tjan" id="tjan">
+
+    
+    <script>
+        function abrir1() {
+            document.getElementById('popup1').style.display = 'block'
+            setTimeOut('fechar1()', tjan.value)
+        }
+        function fechar1() {
+            document.getElementById('popup1').style.display = 'none'
+        }
+        function abrir2() {
+            document.getElementById('popup2').style.display = 'block'
+        }
+        function fechar2() {
+            document.getElementById('popup2').style.display = 'none'
+        }
+    </script>
+</body>
+</html>
