@@ -28,7 +28,7 @@
         }
     </style>
 </head>
-<body onload="abrir()">
+<body>
     <h2>Learning JS client-side programming</h2>
     <h3>Programming with HTML, CSS, JavaScript, all together !</h3>
     <div id="popup1">
@@ -39,18 +39,17 @@
     </div>
 
     <a href="javascript: abrir1()">Abrir pop-up1</a> <br>
-    <a href="javascript: 
-    fechar1()">Fechar pop-up1</a> <br>
+    <a href="javascript: fechar1()">Fechar pop-up1</a> <br>
     <a href="javascript: abrir2()">Abrir pop-up2</a> <br>
     <a href="javascript: fechar2()">Fechar pop-up2</a> <br>
 
-    <input type="number" name="tjan" id="tjan">
+    <input type="text" id="tjan">
 
     
     <script>
         function abrir1() {
             document.getElementById('popup1').style.display = 'block'
-            setTimeOut('fechar1()', tjan.value)
+            setTimeout('fechar1()', tjan.value)
         }
         function fechar1() {
             document.getElementById('popup1').style.display = 'none'
